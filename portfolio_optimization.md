@@ -26,13 +26,6 @@ in markowitz's mean-variance model
 3. 평균 분산 모형을 ML알고리즘에..?
 
 
-
-
-
-https://medium.com/python-data/effient-frontier-in-python-34b0c3043314
-https://medium.com/python-data/efficient-frontier-portfolio-optimization-with-python-part-2-2-2fe23413ad94
-
-
 ```python
 # get data first from Quandl
 
@@ -239,7 +232,7 @@ Image(filename = 'C:/Users/user/Desktop/19_1/Financial_Data_with_python/sharp.jp
 
 
 
-![jpeg](output_13_0.jpeg)
+![output_13_0](https://user-images.githubusercontent.com/41497195/58464521-cac8fa80-8170-11e9-9169-7e19739a04be.jpeg)
 
 
 
@@ -303,17 +296,31 @@ num_portfolios = 50000
 np.random.seed(101)
 
 
+# the paramont interest to investors is
+# what risk-return profiles are possible for a given set of financial instruments, and their statistical characertistics.
+
+
+
+# Monte Carlo simulation 
+# random portfolio weight vector들을 generate하기 위해.
+
 #populate the empty lists with each portfolios returns, risk and weights
+# 각각의 simulated allocation에 대해서 expected portfolio return and variance를 도출(저장)
+
 for single_portfolio in range(num_portfolios):
     weights = np.random.random(num_assets) # asset의 개수만큼의 random number 생성
-    weights /= np.sum(weights)
+    weights /= np.sum(weights) # random portfolio weights
+    
     returns = np.dot(weights,returns_annual) #vector와 matrix의 곱
     volatility = np.sqrt(np.dot(weights.T, np.dot (cov_annual, weights)))
     sharpe = returns / volatility
+    
     sharpe_ratio.append(sharpe)
     port_returns.append(returns)
+    
     port_volatility.append(volatility)
     stock_weights.append(weights)
+    
     
     
     
@@ -339,6 +346,23 @@ df = df[column_order]
 
 ```
 
+
+```python
+plt.style.use('seaborn-dark')
+df.plot.scatter(x='Volatility', y='Returns', c='Sharpe Ratio',
+                cmap='RdYlGn', edgecolors='black', figsize=(10, 8), grid=True)
+plt.xlabel('Volatility (Std. Deviation)')
+plt.ylabel('Expected Returns')
+plt.title('Efficient Frontier')
+plt.show()
+```
+
+
+![output_17_0](https://user-images.githubusercontent.com/41497195/58464556-de746100-8170-11e9-8e65-a6df4c30353e.png)
+
+
+
+# Optimal Portfolios
 
 
 

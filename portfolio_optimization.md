@@ -37,7 +37,7 @@ import os
 import datetime as dt
 import quandl
 
-quandl.ApiConfig.api_key = 'RnbjVbHE64Ds4TvB51sq'
+quandl.ApiConfig.api_key = ''
 tickers = ['CNP', 'F', 'WMT', 'GE', 'TSLA']
 
 data = quandl.get_table('WIKI/PRICES', ticker = tickers,

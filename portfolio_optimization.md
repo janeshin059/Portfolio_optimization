@@ -138,6 +138,7 @@ then, we will get expected portfolio return and variance in each simulated alloc
 
 ### the PGP(polynomial goal programming) model
 
+![pgp](https://user-images.githubusercontent.com/41497195/58840491-ccc71800-86a0-11e9-9802-29d1312bc7ae.PNG)
 
 Z: the objective function  
 

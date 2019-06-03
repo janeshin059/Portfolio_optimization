@@ -129,7 +129,7 @@ plt.show()
 to get the efficient frontier, we need to simulate imaginary combinations of portfolios.  
 we should select portfolio which has maximized return & skewness , as well as minimized risk &kurtosis.  
 
-the paramont interest to investors is to find what risk-return profiles are possible for a given set of financial instruments, and their statistical characertistics.
+the paramont interest to investors is to find what risk-return profiles are possible for a given set of financial instruments, and their statistical characteristics.
 
 to make a list of situations, Monte Carlo simulation for generating random portfolio weight vectors is required.  
 first, we should populate the empty lists with each portfolios returns, risk and weights.  
@@ -148,6 +148,9 @@ d1,d2,d3,d4 : deviations of expected return, variance, skewness  from the optima
 
 lambda 1,2,3,4 : preferences of investor  
 
+### Sharpe Ratio
+
+![sharp](https://user-images.githubusercontent.com/41497195/58840477-c173ec80-86a0-11e9-8f04-052f361b5297.jpeg)
 
 ```python
 # calculate daily and annual returns of the stocks

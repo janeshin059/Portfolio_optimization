@@ -952,8 +952,8 @@ table_o.hist(color='green')
 
 
 
+![output_45_1](https://user-images.githubusercontent.com/41497195/58840412-8a9dd680-86a0-11e9-9636-05e3b357620d.png)
 
-![png](output_45_1.png)
 
 
 

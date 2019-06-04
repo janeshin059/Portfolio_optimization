@@ -148,6 +148,8 @@ d1,d2,d3,d4 : deviations of expected return, variance, skewness  from the optima
 
 lambda 1,2,3,4 : preferences of investor  
 
+- we should minimize Z because it is the minimization of the deviations:between(optimal data, current data)  
+- minimization of the distance between optimal and current situation.
 ### Sharpe Ratio
 
 ![sharp](https://user-images.githubusercontent.com/41497195/58840477-c173ec80-86a0-11e9-8f04-052f361b5297.jpeg)
